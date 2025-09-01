@@ -24,7 +24,7 @@ body:
   - type: input
     attributes:
       label: Affected version
-      description: Which version are you using?
+      description: What version are you using?
       placeholder: eg 9.5.0 or main
     validations:
       required: true
@@ -38,17 +38,11 @@ body:
     attributes:
       label: Steps to reproduce
       description: Please provide steps/code examples/etc that will show/help to reproduce the problem.
-    validations:
-      required: true
   - type: textarea
     attributes:
       label: Expected behaviour
       description: How should it work? What is the expected result/output?
-    validations:
-      required: false
   - type: textarea
     attributes:
       label: Additional info
-      description: Please provide any additional information, logs, thoughts, screenshots, ect, that can help to understand/solve the problem.
-    validations:
-      required: false
+      description: Any additional information, logs, thoughts, screenshots, ect, that can help to understand/solve the problem?

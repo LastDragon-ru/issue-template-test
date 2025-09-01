@@ -1,60 +1,54 @@
-name: Bug Report
-description: File a bug report.
+name: Bug report
+description: Something doesn't work as it should?
 labels: ["bug"]
 body:
-  - type: markdown
+  - type: dropdown
     attributes:
-      value: |
-        Thanks for taking the time to fill out this bug report!
+      label: Package
+      description: "Please choose a package, leave blank if it is general or if you are not sure."
+      options:
+        - core
+        - dev
+        - diy-parser
+        - documentator
+        - eloquent
+        - formatter
+        - glob-matcher
+        - graphql
+        - graphql-printer
+        - graphql-printer-testing
+        - migrator
+        - serializer
+        - spa
+        - testing
   - type: input
-    id: contact
     attributes:
-      label: Contact Details
-      description: How can we get in touch with you if we need more info?
-      placeholder: ex. email@example.com
+      label: Affected version
+      description: Which version are you using?
+      placeholder: eg 9.5.0 or main
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Description
+      description: Please describe your problem here.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Steps to reproduce
+      description: Please provide steps/code examples/etc that will show/help to reproduce the problem.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Expected behaviour
+      description: How should it work? What is the expected result/output?
     validations:
       required: false
   - type: textarea
-    id: what-happened
     attributes:
-      label: What happened?
-      description: Also tell us, what did you expect to happen?
-      placeholder: Tell us what you see!
-      value: "A bug happened!"
+      label: Additional info
+      description: Please provide any additional information, logs, thoughts, screenshots, ect, that can help to understand/solve the problem.
     validations:
-      required: true
-  - type: dropdown
-    id: version
-    attributes:
-      label: Version
-      description: What version of our software are you running?
-      options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
-      default: 0
-    validations:
-      required: true
-  - type: dropdown
-    id: browsers
-    attributes:
-      label: What browsers are you seeing the problem on?
-      multiple: true
-      options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
-  - type: textarea
-    id: logs
-    attributes:
-      label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
-      render: shell
-  - type: checkboxes
-    id: terms
-    attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com).
-      options:
-        - label: I agree to follow this project's Code of Conduct
-          required: true
+      required: false

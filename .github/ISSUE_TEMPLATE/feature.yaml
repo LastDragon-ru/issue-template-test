@@ -1,16 +1,29 @@
-name: Enhancement
-description: New feature wanted.
-labels: ["enhancement"]
+name: Feature request
+description: New feature wanted!
+labels: ["scope: feat"]
 body:
-  - type: markdown
+  - type: dropdown
     attributes:
-      value: |
-        Thanks for taking the time to fill out this bug report!
-  - type: input
-    id: contact
+      label: Package
+      description: "Please choose a package, leave blank if it is general or if you are not sure."
+      options:
+        - core
+        - dev
+        - diy-parser
+        - documentator
+        - eloquent
+        - formatter
+        - glob-matcher
+        - graphql
+        - graphql-printer
+        - graphql-printer-testing
+        - migrator
+        - serializer
+        - spa
+        - testing
+  - type: textarea
     attributes:
-      label: Contact Details
-      description: How can we get in touch with you if we need more info?
-      placeholder: ex. email@example.com
+      label: Description
+      placeholder: Type your idea/suggestion here…
     validations:
-      required: false
+      required: true
